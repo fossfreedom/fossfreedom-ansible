@@ -1,0 +1,54 @@
+#- name: Remove Desktop APT Packages
+#  apt:
+#    name: "{{ rempackages }}"
+#    state: absent
+#  vars:
+#    rempackages:
+#      - libreoffice-*
+#      - plank
+#      - geary
+#      - gnome-screenshot
+
+- name: Autoremove and Purge APT Packages
+  apt:
+    autoremove: yes
+    purge: yes
+- name: Install Desktop APT Packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - git
+      - xclip
+      - build-essential
+      - check-all-the-things
+      - bzr
+      - ubuntu-dev-tools
+      - python3-all
+      - openssh-server
+      - ubuntu-restricted-extras
+      - debconf-utils
+      - debhelper
+      - ubuntu-dev-tools
+      - piuparts
+      - schroot
+      - sbuild
+      - htop
+      - gtk-3-examples
+
+- name: Autoremove and Purge APT Packages
+  apt:
+    autoremove: yes
+    purge: yes
+
+#- name: Install Xmind .deb package.
+#  apt:
+#    deb: https://www.xmind.net/xmind/downloads/XMind-2020-for-Linux-amd-64bit-{{ xmind_version }}.deb
+
+#- name: Install xbanish .deb package.
+#  apt:
+#    deb: https://launchpad.net/~minos-archive/+archive/ubuntu/main/+files/xbanish_202005040308+git46-minos~ubuntu20.04.1_amd64.deb
+
+# - name: Install Espanso .deb package from Github.
+#   apt:
+#     deb: https://github.com/federico-terzi/espanso/releases/latest/download/espanso-debian-amd64.deb

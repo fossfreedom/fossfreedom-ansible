@@ -1,0 +1,9 @@
+# Needed since the docker snap does not create
+- name: Ensure group "docker" exists
+  group:
+    name: docker
+    state: present
+- name: Ensure group "audio" exists
+  group:
+    name: audio
+    state: present

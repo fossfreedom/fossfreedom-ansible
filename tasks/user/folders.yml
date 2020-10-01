@@ -1,0 +1,23 @@
+- name: Create a directory if it does not exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+    owner: "{{ my_username }}"
+    group: "{{ my_username }}"
+  with_items:
+    - "/home/{{ my_username }}/ubuntu/scratch"
+    - "/home/{{ my_username }}/tmp"
+    - "/home/{{ my_username }}/sync/gdrive-br"
+    - "/home/{{ my_username }}/sync/gdrive-telus"
+    - "/home/{{ my_username }}/sync/telus-shared"
+    - "/home/{{ my_username }}/private"
+    - "/home/{{ my_username }}/snap/ncspot/current/.config/ncspot/"
+    - "/home/{{ my_username }}/.config/budgie-extras/clockworks/"
+
+- name: Create /etc/budgie-desktop directory if it does not exist
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "/etc/budgie-desktop"

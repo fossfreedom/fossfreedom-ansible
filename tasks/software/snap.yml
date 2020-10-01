@@ -1,0 +1,76 @@
+# - name: Remove SNAP Packages
+#   snap:
+#     name: "{{ remsnaps }}"
+#     state: absent
+#   vars:
+#     remsnaps:
+#       - croc
+#       - polar-bookshelf
+
+#- name: Install Snap Packages
+#  snap:
+#    name:
+#      - beekeeper-studio
+
+- name: Install Classic Snap Packages
+  snap:
+    name: "{{ classicsnaps }}"
+    classic: yes
+  vars:
+    classicsnaps:
+      - code
+
+#- name: Install Node Snap Package --channel=11/stable --classic
+#  snap:
+#    name: node
+#    channel: 13/stable
+#    classic: yes
+
+#- name: Install Multipass Snap Package --channel=beta --classic
+#  snap:
+#    name: multipass
+#    channel: beta
+#    classic: yes
+
+#- name: Install Snap Packages from --channel=edge
+#  snap:
+#    name: "{{ edgesnaps }}"
+#    channel: edge
+#  vars:
+#    edgesnaps:
+#      - irccloud
+#      - authy
+#      - shfmt
+
+#- name: Install Snap Packages --channel=edge --classic
+#  snap:
+#    name: "{{ edgeclassicsnaps }}"
+#    channel: edge
+#    classic: yes
+#  vars:
+#    edgeclassicsnaps:
+#      - restic
+#      - espanso
+
+# - name: Install Snap Packages from --channel=beta
+#   snap:
+#     name: "{{betasnaps}}"
+#     channel: beta
+#   vars:
+#     betasnaps:
+#       - molecule
+
+#- name: Install Hugo Snap Package --channel=extended/edge
+#  snap:
+#    name: hugo
+#    channel: extended/edge
+
+#- name: Install Laptop Snaps
+#  snap:
+#    name:
+#      - auto-cpufreq
+#  when:
+#    # Each line is treated as "AND"
+#      - ansible_distribution == "Ubuntu"
+      # Variables use no {{}} or quotes in conditionals
+#      - ansible_hostname == laptop_hostname

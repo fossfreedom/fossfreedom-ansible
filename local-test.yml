@@ -1,0 +1,23 @@
+- hosts: localhost
+  become: true
+  vars_files:
+    - config.yml
+  # pre_tasks:
+  #   - name: Update Repositories
+  #     apt: update_cache=yes
+  #     changed_when: false
+  tasks:
+    - include: tasks/localtest.yml
+    # - include: tasks/user/users.yml
+    # - include: tasks/user/shell.yml
+    #- include: tasks/localtest.yml
+    #- include: tasks/software/github-releases.yml
+    #- include: tasks/software/repos.yml
+    #- include: tasks/software/apt.yml
+    #- include: tasks/software/snap.yml
+    # - include: tasks/software/pop-theme.yml
+    # - include: tasks/ansible/sudoers.yml
+    #  - include: tasks/system/services.yml
+    # - include: tasks/user/general-user-settings.yml
+    # - include: tasks/user/shuffler.yml
+    # - include: tasks/user/wallstreet.yml
