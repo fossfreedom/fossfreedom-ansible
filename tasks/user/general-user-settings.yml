@@ -142,13 +142,13 @@
 #    value: "6"
 #    state: present
 
-- name: Set panel width
-  become: true
-  become_user: "{{ my_username }}"
-  dconf:
-    key: "/com/solus-project/budgie-panel/panels/{{ PANEL_ID }}/size"
-    value: "35"
-    state: present
+#- name: Set panel width
+#  become: true
+#  become_user: "{{ my_username }}"
+#  dconf:
+#    key: "/com/solus-project/budgie-panel/panels/{{ PANEL_ID }}/size"
+#    value: "35"
+#    state: present
 
 #- name: Set panel location
 #  become: true
