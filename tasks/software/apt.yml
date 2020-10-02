@@ -21,7 +21,6 @@
       - git
       - xclip
       - build-essential
-      - check-all-the-things
       - bzr
       - ubuntu-dev-tools
       - python3-all
