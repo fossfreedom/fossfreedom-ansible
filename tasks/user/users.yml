@@ -1,6 +1,6 @@
 - name: Adding System Users
   user:
-    name: david
+    name: dad
     comment: David Mohammed
     groups: sudo, adm, cdrom, dip, plugdev, lpadmin, sambashare, audio, sbuild
     append: yes
