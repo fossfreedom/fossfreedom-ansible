@@ -219,7 +219,7 @@
   become_user: "{{ my_username }}"
   dconf:
     key: "/org/gnome/desktop/screensaver/lock-enabled"
-    value: "true"
+    value: "false"
     state: present
 
 - name: Lock Screen on Suspend
@@ -227,7 +227,7 @@
   become_user: "{{ my_username }}"
   dconf:
     key: "/org/gnome/desktop/screensaver/ubuntu-lock-on-suspend"
-    value: "true"
+    value: "false"
     state: present
 
 - name: Show Notifications on Lock Screen
@@ -238,7 +238,7 @@
     value: "true"
     state: present
 
-- name: Never Prompt or Start Programs on Media Insertiion
+- name: Never Prompt or Start Programs on Media Insertion
   become: true
   become_user: "{{ my_username }}"
   dconf:
@@ -260,4 +260,12 @@
   dconf:
     key: "/org/gnome/desktop/interface/locate-pointer"
     value: "true"
+    state: present
+
+- name: Disable screensaver lock
+  become: true
+  become_user: "{{ my_username }}"
+  dconf:
+    key: "/org/gnome/desktop/session/idle-delay"
+    value: "uint32 0"
     state: present
