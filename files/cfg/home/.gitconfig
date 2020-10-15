@@ -1,7 +1,7 @@
 [user]
-	name = Dustin Krysak
-    username = bashfulrobot
-	email = dustin@bashfulrobot.com
+	name = David Mohammed
+    username = fossfreedom
+	email = fossfreedom@ubuntu.com
 
 [core]
 	# editor = code-insiders
@@ -15,4 +15,4 @@
 	ui = auto
 
 [github]
-	user = bashfulrobot
+	user = fossfreedom
