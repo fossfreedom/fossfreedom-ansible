@@ -34,6 +34,7 @@
       - sbuild
       - htop
       - gtk-3-examples
+      - transifex-client
 
 - name: Autoremove and Purge APT Packages
   apt:
