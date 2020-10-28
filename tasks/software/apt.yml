@@ -35,6 +35,7 @@
       - htop
       - gtk-3-examples
       - transifex-client
+      - germinate
 
 - name: Autoremove and Purge APT Packages
   apt:
