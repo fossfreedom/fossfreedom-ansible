@@ -36,6 +36,8 @@
       - gtk-3-examples
       - transifex-client
       - germinate
+      - dh-make
+      - glade
 
 - name: Autoremove and Purge APT Packages
   apt:
