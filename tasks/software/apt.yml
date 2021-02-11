@@ -38,6 +38,7 @@
       - germinate
       - dh-make
       - glade
+      - dconf-editor
 
 - name: Autoremove and Purge APT Packages
   apt:
