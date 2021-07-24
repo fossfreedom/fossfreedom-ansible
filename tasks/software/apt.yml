@@ -39,6 +39,7 @@
       - dh-make
       - glade
       - dconf-editor
+      - meson
 
 - name: Autoremove and Purge APT Packages
   apt:
